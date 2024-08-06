@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shortcut Inserter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Configure Shortcuts</h1>
+  <form id="shortcutForm">
+    <label for="shortcut">Shortcut Key:</label>
+    <input type="text" id="shortcut" name="shortcut" required>
+    <label for="text">Text to Insert:</label>
+    <input type="text" id="text" name="text" required>
+    <button type="submit">Save Shortcut</button>
+  </form>
+  <div class="buttons">
+    <button id="exportCSV">Export to CSV</button>
+    <input type="file" id="importFile" accept=".csv, .xlsx" style="display:none">
+    <button id="import">Import Configuration</button>
+  </div>
+  <h2>Saved Shortcuts</h2>
+  <div class="shortcut-list" id="shortcutList"></div>
+  <script src="popup.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</body>
+</html>
